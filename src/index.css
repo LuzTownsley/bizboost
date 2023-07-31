@@ -131,6 +131,11 @@ h3 {
   font-weight: var(--bold);
 }
 
+h4 {
+  font-size: 1.2em;
+  line-height: 1.72em;
+}
+
 h4,
 h5 {
   font-weight: var(--bold);
@@ -303,14 +308,41 @@ main > * {
    FEATURED CONTENT
 =========================================*/
 
-.featured-content-layout * {
+/* .featured-content-layout * {
   border: 1px solid var(--body-text);
-}
+} */
 
 .featured-content-layout {
   display: flex;
   flex-direction: column;
   gap: 44px;
+}
+
+.featured-content {
+  text-align: center;
+}
+
+.box a {
+  position: relative;
+}
+
+hr {
+  position: absolute;
+  top: 17px;
+  text-align: start;
+  border-color: var(--gradient-end);
+  width: 95px;
+}
+
+.boxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 39.9px;
+}
+
+.boxes-container .box {
+  padding: 44px;
+  border: 2px solid var(--border-color);
 }
 
 /*=======================================
@@ -452,6 +484,6 @@ main > * {
   }
 
   .boxes-container {
-    display: flex;
+    flex-direction: row;
   }
 }
