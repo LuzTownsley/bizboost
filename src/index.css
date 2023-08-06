@@ -330,12 +330,25 @@ main > * {
   position: relative;
 }
 
-hr {
+/* hr {
   position: absolute;
   top: 17px;
   text-align: start;
   border-color: var(--gradient-end);
   width: 95px;
+} */
+
+.view-more::after {
+  content: '';
+  border-bottom: 2px solid var(--gradient-end);
+  display: block;
+  height: 0px;
+  width: 85px;
+}
+
+.view-more:hover::after {
+  width: 30px;
+  transition: all 0.3s ease-in-out;
 }
 
 .boxes-container {
@@ -486,6 +499,16 @@ footer section:last-child {
 }
 
 /*=======================================
+   SCROLL - TOP
+=========================================*/
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  }
+
+/*=======================================
     TABLET & DESKTOP BREAKPOINTS
 =========================================*/
 @media all and (min-width: 479px) and (max-width: 1280px) {
@@ -624,6 +647,10 @@ footer section:last-child {
     transform: scale(1.1);
   }
 
+  .box figure {
+    overflow: hidden;
+  }
+
   .featured-content-layout {
     gap: 44px;
   }
@@ -687,4 +714,6 @@ footer section:last-child {
     justify-content: flex-end;
     align-items: center;
   }
+
 }
+
