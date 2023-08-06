@@ -330,14 +330,6 @@ main > * {
   position: relative;
 }
 
-/* hr {
-  position: absolute;
-  top: 17px;
-  text-align: start;
-  border-color: var(--gradient-end);
-  width: 95px;
-} */
-
 .view-more::after {
   content: '';
   border-bottom: 2px solid var(--gradient-end);
@@ -501,12 +493,25 @@ footer section:last-child {
 /*=======================================
    SCROLL - TOP
 =========================================*/
-.to-top {
+.float {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+  bottom: 0;
+  right: 0;
   z-index: 9999;
-  }
+  margin: 20px;
+  padding: 0px;
+}
 
 /*=======================================
     TABLET & DESKTOP BREAKPOINTS
@@ -643,7 +648,7 @@ footer section:last-child {
   }
 
   .box img:hover {
-    opacity: 0.8;
+    opacity: 0.6;
     transform: scale(1.1);
   }
 
@@ -715,5 +720,34 @@ footer section:last-child {
     align-items: center;
   }
 
+  .footer-social ul {
+    margin-right: 50px;
+  }
+
+  .float {
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(
+      90deg,
+      var(--gradient-start) 0%,
+      var(--gradient-end) 100%
+    );
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    margin: 20px;
+    padding: 0px;
+  }
+
+  .float:hover {
+    background: var(--white);
+    color: black;
+    transition: all 0.8s ease;
+  }
 }
 
